@@ -1,47 +1,44 @@
-import {
-  PommyArt,
-  JuicyArt,
-  GoldieArt,
-  FlantasticArt,
-} from '../components/characterArt.jsx';
-
 /**
- * Data for each adoptable sprite. `className` positions the card on the
- * scrapbook grid, and an optional `badge` or `tape` decoration is layered on
- * top exactly as in the original design.
+ * Data for each character in the sticker book. Each entry points at one of the
+ * hand-drawn artworks in /public and positions its card on the scrapbook grid.
+ * An optional `badge` or `tape` decoration is layered on top.
+ *
+ * Names and descriptions are easy to tweak — edit them right here.
  */
 export const characters = [
   {
-    id: 'pommy',
-    name: 'Pommy',
+    id: 'nacho',
+    name: 'Nacho',
     description:
-      'A highly energetic bundle of zest. Rolls everywhere instead of walking.',
+      'A very long, very loyal sausage dog. Convinced every lap is his rightful throne.',
+    image: '/dachshund.png',
     className: 'char-1',
-    Art: PommyArt,
     badge: 'New!',
   },
   {
-    id: 'juicy',
-    name: 'Juicy',
+    id: 'sunny',
+    name: 'Sunny',
     description:
-      'Always 100% concentrated. Tends to spill secrets when squeezed.',
+      'Wears shades rain or shine. Radiates warmth and mildly unsolicited optimism.',
+    image: '/sunny.png',
     className: 'char-2',
-    Art: JuicyArt,
     tape: 'tape-2',
   },
   {
-    id: 'goldie',
-    name: 'Goldie',
-    description: 'Memory span of 3 seconds, but makes every moment count.',
+    id: 'mila',
+    name: 'Mila',
+    description:
+      'Greets everyone with arms wide open. Collects red glasses and good days.',
+    image: '/girl.png',
     className: 'char-3',
-    Art: GoldieArt,
     tape: 'tape-3',
   },
   {
-    id: 'flantastic',
-    name: 'Flantastic',
-    description: 'Jiggles when happy. Has a sweet disposition and a caramel hat.',
+    id: 'biscuit',
+    name: 'Professor Biscuit',
+    description:
+      'A scholarly tabby in blue spectacles. Judges your book choices in silence.',
+    image: '/cat.png',
     className: 'char-4',
-    Art: FlantasticArt,
   },
 ];
