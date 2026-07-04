@@ -1,0 +1,240 @@
+.scrapbook {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: auto auto auto;
+  gap: 20px;
+}
+
+/* ---------- Header ---------- */
+.header-section {
+  grid-column: 2 / 11;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  margin-top: 20px;
+  z-index: 10;
+}
+
+.title-sticker {
+  background: var(--orange-main);
+  color: var(--white);
+  padding: 15px 40px;
+  border-radius: 50px;
+  transform: rotate(-2deg);
+  --rot: -2deg;
+  text-align: center;
+  box-shadow:
+    0 0 0 8px var(--white),
+    5px 15px 30px var(--shadow-color);
+}
+
+.title-sticker h1 {
+  font-size: 3rem;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.title-sticker p {
+  font-weight: 800;
+  font-size: 1.1rem;
+  margin-top: 5px;
+  color: var(--yellow);
+}
+
+/* ---------- Character card placement ---------- */
+.char-1 {
+  grid-column: 2 / 6;
+  grid-row: 2;
+  justify-self: center;
+  transform: rotate(3deg);
+  --rot: 3deg;
+  margin-top: 40px;
+}
+.char-2 {
+  grid-column: 8 / 12;
+  grid-row: 2;
+  justify-self: center;
+  transform: rotate(-4deg);
+  --rot: -4deg;
+}
+.char-3 {
+  grid-column: 3 / 7;
+  grid-row: 3;
+  justify-self: center;
+  transform: rotate(-2deg);
+  --rot: -2deg;
+  margin-top: -20px;
+}
+.char-4 {
+  grid-column: 7 / 11;
+  grid-row: 3;
+  justify-self: center;
+  transform: rotate(5deg);
+  --rot: 5deg;
+  margin-top: 30px;
+}
+
+.character-card {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: var(--white);
+}
+
+.character-art {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.character-art svg {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.character-name {
+  font-size: 1.8rem;
+  color: var(--orange-main);
+  margin-bottom: 5px;
+}
+
+.character-desc {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.badge {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  background: var(--yellow);
+  color: var(--text-dark);
+  font-family: 'Fredoka One', cursive;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  transform: rotate(15deg);
+  box-shadow:
+    0 0 0 4px var(--white),
+    2px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Washi tape ---------- */
+.tape {
+  position: absolute;
+  height: 35px;
+  background-color: rgba(255, 163, 81, 0.8);
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(255, 255, 255, 0.4) 10px,
+    rgba(255, 255, 255, 0.4) 20px
+  );
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  z-index: 50;
+  opacity: 0.9;
+  clip-path: polygon(
+    0% 5%, 5% 0%, 10% 8%, 15% 2%, 20% 9%, 25% 1%, 30% 10%, 35% 3%, 40% 7%, 45% 0%,
+    50% 9%, 55% 2%, 60% 8%, 65% 1%, 70% 10%, 75% 4%, 80% 8%, 85% 2%, 90% 9%, 95% 3%,
+    100% 6%, 100% 95%, 95% 100%, 90% 92%, 85% 98%, 80% 91%, 75% 99%, 70% 90%,
+    65% 97%, 60% 92%, 55% 98%, 50% 91%, 45% 100%, 40% 93%, 35% 97%, 30% 90%,
+    25% 99%, 20% 91%, 15% 98%, 10% 92%, 5% 100%, 0% 95%
+  );
+}
+
+.tape-1 {
+  width: 140px;
+  top: -15px;
+  left: -30px;
+  transform: rotate(-15deg);
+}
+.tape-2 {
+  width: 120px;
+  bottom: -10px;
+  right: -20px;
+  transform: rotate(10deg);
+  background-color: rgba(143, 214, 164, 0.8);
+}
+.tape-3 {
+  width: 160px;
+  top: 10px;
+  right: -40px;
+  transform: rotate(25deg);
+  background-color: rgba(255, 209, 102, 0.8);
+}
+
+/* ---------- Floating decorations ---------- */
+.deco {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(2px 4px 6px var(--shadow-color));
+}
+
+.deco-flower-1 {
+  top: 10%;
+  left: 10%;
+  transform: rotate(15deg);
+  width: 60px;
+  animation: float 6s ease-in-out infinite;
+}
+.deco-star-1 {
+  top: 20%;
+  right: 15%;
+  width: 40px;
+  animation: float 5s ease-in-out infinite alternate;
+}
+.deco-heart {
+  bottom: 20%;
+  left: 15%;
+  width: 50px;
+  animation: float 7s ease-in-out infinite;
+  transform: rotate(-20deg);
+}
+.deco-flower-2 {
+  bottom: 15%;
+  right: 10%;
+  width: 70px;
+  animation: float 4s ease-in-out infinite alternate-reverse;
+  transform: rotate(45deg);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .scrapbook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 10px;
+  }
+  .header-section,
+  .char-1,
+  .char-2,
+  .char-3,
+  .char-4 {
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 0;
+  }
+  .title-sticker {
+    transform: rotate(0);
+    --rot: 0;
+  }
+  .deco {
+    display: none;
+  }
+}
