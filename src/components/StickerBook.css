@@ -23,15 +23,26 @@
   z-index: 10;
 }
 
-/* The hand-drawn "Squirrel on the Swing" banner sits as the title, gently
-   tilted like it was stuck on by hand. */
-.title-banner {
-  width: min(520px, 80vw);
-  max-width: 100%;
-  height: auto;
+/* The title sticker: a pink ribbon-style pill echoing the squirrel banner,
+   gently tilted and held down by a strip of washi tape. */
+.title-sticker {
+  background: var(--pink);
+  color: var(--pink-cream);
+  padding: 18px 44px;
+  border-radius: 50px;
+  text-align: center;
   transform: rotate(-2deg);
-  filter: drop-shadow(4px 8px 12px var(--shadow-color));
+  --rot: -2deg;
+  box-shadow:
+    0 0 0 8px var(--white),
+    5px 15px 30px var(--shadow-color);
   animation: title-sway 6s ease-in-out infinite;
+}
+
+.title-sticker h1 {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.12);
 }
 
 @keyframes title-sway {
@@ -252,6 +263,7 @@
   .title-sticker {
     transform: rotate(0);
     --rot: 0;
+    animation: none;
   }
   .deco {
     display: none;

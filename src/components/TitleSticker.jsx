@@ -1,11 +1,14 @@
 /**
- * The header: the hand-drawn "Squirrel on the Swing" banner, with a small
- * tagline pill inviting the visitor to stamp the page.
+ * The header: the "westofchester's world" title pill, held down by a strip of
+ * washi tape, with a small tagline inviting the visitor to stamp the page.
  */
 export default function TitleSticker() {
   return (
     <div className="header-section">
-      <img className="title-banner" src="/title-squirrel.png" alt="Squirrel on the Swing" />
+      <div className="title-sticker sticker">
+        <div className="tape tape-1" />
+        <h1>westofchester&rsquo;s world</h1>
+      </div>
       <p className="title-tagline">Click anywhere to leave a mark ✧</p>
     </div>
   );

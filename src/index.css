@@ -8,6 +8,9 @@
   --text-dark: #5c3d2e;
   --white: #ffffff;
   --shadow-color: rgba(255, 122, 41, 0.2);
+  /* Pink accents borrowed from the "Squirrel on the Swing" ribbon. */
+  --pink: #e86aa6;
+  --pink-cream: #fce2a0;
 }
 
 * {
