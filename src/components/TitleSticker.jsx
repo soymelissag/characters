@@ -10,7 +10,6 @@ export default function TitleSticker() {
         src="/title-sign.png"
         alt="westofchester's world of characters"
       />
-      <p className="title-tagline">Click anywhere to leave a mark ✧</p>
     </div>
   );
 }

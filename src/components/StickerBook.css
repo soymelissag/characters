@@ -39,20 +39,6 @@
   50% { transform: rotate(0deg); }
 }
 
-.title-tagline {
-  margin-top: 12px;
-  background: var(--orange-main);
-  color: var(--white);
-  font-weight: 800;
-  font-size: 1rem;
-  padding: 8px 22px;
-  border-radius: 50px;
-  transform: rotate(1deg);
-  box-shadow:
-    0 0 0 5px var(--white),
-    3px 6px 15px var(--shadow-color);
-}
-
 /* ---------- Character card placement ---------- */
 .char-1 {
   grid-column: 2 / 6;
